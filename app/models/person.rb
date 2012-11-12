@@ -3,4 +3,6 @@ class Person < ActiveRecord::Base
 
   validates_presence_of :name, :gender
   validates_presence_of :orientation_date, :unless => :date_of_birth
+
+  validates_inclusion_of :gender, :in => [:m, :f]
 end

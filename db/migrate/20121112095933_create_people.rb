@@ -2,7 +2,7 @@ class CreatePeople < ActiveRecord::Migration
   def change
     create_table :people do |t|
       t.string        :name
-      t.boolean       :gender
+      t.string        :gender
       t.text          :description
       t.date          :date_of_birth
       t.date          :date_of_death

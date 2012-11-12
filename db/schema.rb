@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112095933) do
+ActiveRecord::Schema.define(:version => 20121112103728) do
 
   create_table "people", :force => true do |t|
     t.string   "name"
-    t.boolean  "gender"
+    t.string   "gender"
     t.text     "description"
     t.date     "date_of_birth"
     t.date     "date_of_death"
@@ -25,6 +25,18 @@ ActiveRecord::Schema.define(:version => 20121112095933) do
     t.datetime "created_at",       :null => false
     t.datetime "updated_at",       :null => false
   end
+
+  create_table "relations", :force => true do |t|
+    t.integer  "originating_person_id"
+    t.integer  "target_person_id"
+    t.boolean  "siblings",              :default => false
+    t.boolean  "adopted",               :default => false
+    t.datetime "created_at",                               :null => false
+    t.datetime "updated_at",                               :null => false
+  end
+
+  add_index "relations", ["originating_person_id"], :name => "index_relations_on_originating_person_id"
+  add_index "relations", ["target_person_id"], :name => "index_relations_on_target_person_id"
 
   create_table "users", :force => true do |t|
     t.datetime "created_at", :null => false

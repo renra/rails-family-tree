@@ -1,7 +1,7 @@
 Family Tree Tracking Application
 ================================
 
-Family tree management tool. WIP
+This application is for now built with the easiest possible user architecture. There are two types of users - admin and viewer - each has their own password. So inviting someone to view the family tree means sending him the viewer login and password common for all users. Only the admin(s) has the right to edit the data.
 
 Problems
 ========

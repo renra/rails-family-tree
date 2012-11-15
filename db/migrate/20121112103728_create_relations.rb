@@ -3,7 +3,7 @@ class CreateRelations < ActiveRecord::Migration
     create_table :relations do |t|
       t.integer      :originating_person_id
       t.integer      :target_person_id
-      t.boolean      :siblings, :default => false
+      t.string       :relation_type
       t.boolean      :adopted, :default => false
       t.timestamps
     end

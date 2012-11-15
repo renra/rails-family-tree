@@ -3,3 +3,6 @@
 
 en:
   hello: "Hello world"
+  active_record:
+    errors:
+      same: "cannot be the same"

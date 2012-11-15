@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20121112103728) do
   create_table "relations", :force => true do |t|
     t.integer  "originating_person_id"
     t.integer  "target_person_id"
-    t.boolean  "siblings",              :default => false
+    t.string   "relation_type"
     t.boolean  "adopted",               :default => false
     t.datetime "created_at",                               :null => false
     t.datetime "updated_at",                               :null => false

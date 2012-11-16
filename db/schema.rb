@@ -19,11 +19,10 @@ ActiveRecord::Schema.define(:version => 20121112103728) do
     t.text     "description"
     t.date     "date_of_birth"
     t.date     "date_of_death"
-    t.date     "orientation_date"
     t.string   "place_of_birth"
     t.string   "burial_place"
-    t.datetime "created_at",       :null => false
-    t.datetime "updated_at",       :null => false
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "relations", :force => true do |t|

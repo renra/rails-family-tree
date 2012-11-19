@@ -4,7 +4,7 @@ class Relation < ActiveRecord::Base
   belongs_to :originating_person, :class_name => 'Person'
   belongs_to :target_person, :class_name => 'Person'
 
-  validates :originating_person, :target_person, :presence => true
+  validates :originating_person, :target_person, :relation_type, :presence => true
   validates_inclusion_of :relation_type, :in => [:parent, :spouse]
   validate :check_target_person
 
